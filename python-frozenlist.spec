@@ -21,13 +21,6 @@ collections.abc.MutableSequence, and which can be made immutable.}
 %description
 %{common_description}
 
-%package -n     python3-%{pypi_name}
-Summary:        %{summary}
-%{?python_provide:%python_provide python3-%{pypi_name}}
-
-%description -n python3-%{pypi_name}
-%{common_description}
-
 %prep
 %autosetup -n %{pypi_name}-%{version}
 # Remove bundled egg-info
@@ -50,7 +43,7 @@ rm -rf html/.{doctrees,buildinfo}
 %check
 %{__python3} setup.py test
 
-%files -n python3-%{pypi_name}
+%files -n python-%{pypi_name}
 %license LICENSE
 %doc README.rst
 %{python3_sitearch}/%{pypi_name}
