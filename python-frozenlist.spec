@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.3.1
-Release:        2
+Release:        3
 Summary:        A list-like structure which implements collections
 Group:          Development/Python
 License:        Apache 2
