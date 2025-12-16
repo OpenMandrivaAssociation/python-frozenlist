@@ -1,3 +1,4 @@
+%undefine _debugsource_packages
 %global module frozenlist
 
 Name:           python-%{module}
@@ -37,7 +38,7 @@ rm -rf %{module}.egg-info
 find . -type f -name '*.c' -print -delete
 
 # Re-generate C sources with Cython.
-python3 -m cython -3 frozenlist/*.pyx -I frozenlist
+python -m cython -3 frozenlist/*.pyx -I frozenlist
 
 %build
 %py_build
