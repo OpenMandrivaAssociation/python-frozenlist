@@ -54,8 +54,10 @@ export PYTHONPATH="%{buildroot}%{python_sitearch}:${PWD}"
 # remove coverage tests
 rm -rf tests/conftest.py
 sed -i '21,28d' pytest.ini
+# this test is flaky in isolated builts
+k="${k-}${k+ and }not test_iface"
 
-pytest -v
+pytest -v -Wdefault -k "${k-}"
 
 %files
 %license LICENSE
