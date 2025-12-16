@@ -15,8 +15,10 @@ BuildRequires:	python%{pyver}dist(cython)
 BuildRequires:	python%{pyver}dist(expandvars)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(pytest)
 BuildRequires:	python%{pyver}dist(tomli)
 BuildRequires:	python%{pyver}dist(wheel)
+
 
 
 %global common_description %{expand:
