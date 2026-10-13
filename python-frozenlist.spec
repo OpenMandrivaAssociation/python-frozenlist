@@ -3,7 +3,7 @@
 
 Name:           python-%{module}
 Version:        1.8.0
-Release:        1
+Release:        2
 Summary:        A list-like structure which implements collections
 Group:          Development/Python
 License:        Apache-2.0
@@ -11,7 +11,7 @@ URL:            https://github.com/aio-libs/frozenlist
 Source0:        https://files.pythonhosted.org/packages/source/f/%{module}/%{module}-%{version}.tar.gz
 
 BuildRequires:	python
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(cython)
 BuildRequires:	python%{pyver}dist(expandvars)
 BuildRequires:	python%{pyver}dist(setuptools)
